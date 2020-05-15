@@ -1,0 +1,38 @@
+#include <iostream>
+#include<conio.h>
+#include<math.h>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	int p = 3;
+	int q = 11;
+	int n = q * p;
+
+	int a = p - 1;
+	int b = q - 1;
+	int totient = a * b;
+
+	int e = 3;
+	int d = 7;
+	int k;
+	int m = 2;
+	k = (e * d) % totient;
+	int power1 = pow(m, e);
+	int c = power1 % n;
+	int power2 = pow(c, d);
+
+
+	cout << "\n VALUE 'n' :" << n;
+	cout << "\n Totient Value :" << totient;
+	cout << "\n Generated keys:" << k;
+	cout << "\n ENCRYPTION:" << c;
+	cout << "\n DECRYPTION:" << power2 % n;
+
+
+
+
+	return 0;
+}
